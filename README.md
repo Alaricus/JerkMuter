@@ -14,10 +14,7 @@ Features:
 * Mark locations of hidden posts or show nothing at all.
 * Customize placeholder marks with colors, text, and muted user's name.
 * One click muting by clicking a red [×] next to each user's name.
-* New visual options for above customizations and unmuting.
-* New easy installation.
-* No longer necessary to open up the files and mess with code.
-* Free and open source.
+* Visual options for above customizations and unmuting.
 
 Installation Instructions Chrome:
 
@@ -29,4 +26,4 @@ Installation Instructions Firefox:
 1. Go to JerkMuter's page in the store: https://addons.mozilla.org/en-US/firefox/addon/jerkmuter/
 2. Click on the "Add To Firefox" button."
 
-To change the default settings click on Options. The Options button is found via the browser's interface.
+To change the default settings or to unmute someone, click on Options. The Options button is found via the browser's interface.
