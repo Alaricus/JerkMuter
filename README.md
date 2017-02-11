@@ -22,9 +22,11 @@ Features:
 Installation Instructions:
 
 1c. Go to JerkMuter's page in the store: https://chrome.google.com/webstore/detail/jerkmuter/jpdhhdiclbhhmmbjadjbibhjemcjhilg
+
 2c. Click on the "Add To Chrome" button."
 
 1f. Go to JerkMuter's page in the store: https://addons.mozilla.org/en-US/firefox/addon/jerkmuter/
+
 2f. Click on the "Add To Firefox" button."
 
-3. To change the default settings click on Options. The Options button is found via the browser's interface.
+To change the default settings click on Options. The Options button is found via the browser's interface.
