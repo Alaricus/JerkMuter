@@ -1,8 +1,8 @@
 # JerkMuter
 
-JerkMuter 2.0 for GOG Forums
+JerkMuter 3.0 for GOG Forums
 
-JerkMuter is a browser extension. It mainly adds an ability to put other users on ignore, a feature that is standard on most forums and social media platforms. It is available as a native app for Chromium-based browsers such as Chrome and Vivaldi as well as Firefox.
+JerkMuter is a browser extension. It adds the ability to put other users on ignore, a feature that is standard on most forums and social media platforms but not on gog.com for some reaosn. This extension is available as a native app for Chromium-based browsers such as Chrome, Edge, Brave, and Vivaldi as well as for Firefox.
 
 Features:
 
@@ -13,10 +13,10 @@ Features:
 * Hide threads by key phrases, such as "literally hitler."
 * Mark locations of hidden posts or show nothing at all.
 * Customize placeholder marks with colors, text, and muted user's name.
-* One click muting by clicking a red [×] next to each user's name.
+* One click muting by clicking an `[×]` next to each user's name.
 * Visual options for above customizations and unmuting.
 
-Installation Instructions Chrome:
+Installation Instructions for Chromium:
 
 1. Go to JerkMuter's page in the store: https://chrome.google.com/webstore/detail/jerkmuter/jpdhhdiclbhhmmbjadjbibhjemcjhilg
 2. Click on the "Add To Chrome" button."
