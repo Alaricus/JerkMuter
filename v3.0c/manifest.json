@@ -1,22 +1,22 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "JerkMuter",
   "description": "Ignore and other features for gog.com forum. Mute jerks, hide reputation, disable the 'Low Rated' markings, mute threads by keyword.",
-  "version": "2.0.1.5",
-  
+  "version": "3.0.0",
+
   "content_scripts": [{
-    "matches": ["https://www.gog.com/forum/*"],
-    "js": ["jerkmuter.js"]
+    "js": ["jerkmuter.js"],
+    "matches": ["https://www.gog.com/forum/*"]
   }],
-  "options_ui": {
-    "page": "jmoptions.html",
-    "chrome_style": true
-  },
   "permissions": ["storage"],
-  "icons": { 
+  "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "jmoptions.html",
+    "default_icon": "icon128.png"
   }
 }
