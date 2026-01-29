@@ -3,7 +3,7 @@
 
   "name": "JerkMuter",
   "description": "A configurable ignore feature for the forum at gog.com",
-  "version": "3.0.1",
+  "version": "3.0.2",
 
   "content_scripts": [{
     "js": ["jerkmuter.js"],
