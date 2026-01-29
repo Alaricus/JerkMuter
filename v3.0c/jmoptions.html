@@ -23,6 +23,7 @@
     <main>
       <h1 id="status"></h1>
       <input type="checkbox" id="quotes"> Mute jerks' posts when they are quoted by other users.<br>
+      <input type="checkbox" id="quotepeek"> Display a Peek button in place of a muted quote.<br>
       <input type="checkbox" id="threads"> Mute forum threads started by jerks you muted.<br>
       <input type="checkbox" id="phrases"> Mute forum threads by keywords.<br>
       <input type="text" id="keywordtext"> <button id="add">Add Keywords</button><br>
@@ -31,12 +32,31 @@
 
       <input type="checkbox" id="disable"> Disable the note altogether to mute jerks without a trace.<br>
       <input type="checkbox" id="name"> Display the name of the muted jerk within the note.<br>
-      <input type="text" id="notetext"> Set the note's text.<br><br>
+      <input type="text" id="notetext"> Set the note's text.<br>
+      <input type="checkbox" id="peek"> Display a Peek button in place of a muted post.<br><br>
       <input type="color" id="bordercolor" value="#656565"> Set the note's border color.<br>
       <input type="color" id="backcolor" value="#656565"> Set the note's background color.<br>
       <input type="color" id="textcolor" value="#cccccc"> Set the note's text color.<br>
 
-      <div id="example"></div>
+      <div id="example" style="display: flex; align-items: center; gap: 5px">
+        <span id="exampleimage" style="transform: translate(0, 3px)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+            <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+          </svg>
+        </span>
+        <span id="exampletext"></span>
+      </div>
 
       <button id="save">Save Settings</button><br><br>
 
