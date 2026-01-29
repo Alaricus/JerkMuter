@@ -18,7 +18,7 @@
 
   retrieveData(() => { addMuteButton(); }, () => { processPage(); });
 
-  function retrieveData(callback1, callback2, callback3 ) {
+  function retrieveData(callback1, callback2) {
     chrome.storage.sync?.get({
       st_quotes: true,
       st_quotepeek: false,
@@ -49,7 +49,6 @@
       keywords = items.st_keywords;
       callback1();
       callback2();
-      callback3();
     });
   }
 
@@ -79,9 +78,8 @@
       postContent = getContent(allNodes[i], cssClass);
 
       for (let j = 0; j < list.length; j++) {
-
         if (((allNodes[i].textContent === list[j] || allNodes[i].innerHTML === (list[j] + ': ')) && postContent !== boiler.text)
-          || cssClass === 'topic_s' && allNodes[i].innerHTML.toLowerCase().includes(list[j])) {
+          || cssClass === 'topic_s' && allNodes[i].firstChild.innerText.toLowerCase().includes(list[j].toLowerCase())) {
 
           mute(allNodes[i], cssClass, list[j]);
 
@@ -115,10 +113,10 @@
   function mute(node, cssClass, jerk) {
     switch(cssClass) {
       case 'topic_s':
-        node.parentNode.parentNode.removeChild(node.parentNode);
+        node.closest('.list_row_odd').style.display = 'none';
         break;
       case 'user__name':
-        node.parentNode.parentNode.parentNode.removeChild(node.parentNode.parentNode);
+        node.closest('.list_row_odd').style.display = 'none';
         break;
       case 'quot_user_name':
         const quote = node.closest('.quot');
