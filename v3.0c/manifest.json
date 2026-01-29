@@ -2,8 +2,8 @@
   "manifest_version": 3,
 
   "name": "JerkMuter",
-  "description": "Ignore and other features for gog.com forum. Mute jerks, hide reputation, disable the 'Low Rated' markings, mute threads by keyword.",
-  "version": "3.0.0",
+  "description": "A configurable ignore feature for the forum at gog.com",
+  "version": "3.0.1",
 
   "content_scripts": [{
     "js": ["jerkmuter.js"],
