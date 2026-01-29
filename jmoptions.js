@@ -1,5 +1,7 @@
 'use strict';
 
+const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+
 const quotes = document.querySelector('#quotes');
 const quotepeek = document.querySelector('#quotepeek');
 const threads = document.querySelector('#threads');
@@ -25,7 +27,7 @@ let jerks = [];
 let keywords = [];
 
 function save_options() {
-  chrome.storage.sync?.set({
+  browserAPI.storage.sync?.set({
     st_quotes: quotes.checked,
     st_quotepeek: quotepeek.checked,
     st_threads: threads.checked,
@@ -50,7 +52,7 @@ function save_options() {
 }
 
 function restore_options() {
-  chrome.storage.sync.get({
+  browserAPI.storage.sync.get({
     st_quotes: true,
     st_quotepeek: false,
     st_threads: false,

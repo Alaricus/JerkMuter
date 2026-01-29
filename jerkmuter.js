@@ -1,7 +1,8 @@
+'use strict';
+
+const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+
 (function() {
-
-  'use strict';
-
   let showJerksName;
   let hideBriefNote;
   let briefNote;
@@ -19,7 +20,7 @@
   retrieveData(() => { addMuteButton(); }, () => { processPage(); });
 
   function retrieveData(callback1, callback2) {
-    chrome.storage.sync?.get({
+    browserAPI.storage.sync?.get({
       st_quotes: true,
       st_quotepeek: false,
       st_threads: false,
@@ -214,7 +215,7 @@
       let userName = e.target.id.slice(9);
       jerks.push(userName);
 
-      chrome.storage.sync?.set({
+      browserAPI.storage.sync?.set({
         st_jerks: jerks
       }, () => {
         processPage();
