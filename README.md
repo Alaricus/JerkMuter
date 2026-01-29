@@ -12,7 +12,7 @@ Features:
 * Hide threads by key phrases, such as "literally hitler".
 * Mark locations of hidden posts or show nothing at all.
 * Customize placeholder marks with colors, text, and muted user's name.
-* One click muting by clicking an trash icon next to each user's name.
+* One click muting by clicking a trash icon next to each user's name.
 * Optional peek feature to temporarily view a muted post or a quote by clicking on an eye icon.
 * Visual options for above customizations and unmuting.
 
