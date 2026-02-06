@@ -12,6 +12,6 @@ self.JERKMUTER_DEFAULT_OPTIONS = {
   st_backColor: '#656565',
   st_textColor: '#cccccc',
   st_noteText: 'Muted',
-  st_jerks: ['Rude Jerk'],
+  st_jerks: ['RudeJerk'],
   st_keywords: ['literally hitler']
 };

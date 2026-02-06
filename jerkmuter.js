@@ -67,26 +67,18 @@ function processClass(cssClass, list) {
   let previousContent = '';
   let allNodes = document.getElementsByClassName(cssClass);
   let originalNodesLength = allNodes.length;
-  for (let i = 0; i < allNodes.length; i++) {
-    const postContent = getContent(allNodes[i], cssClass);
 
+  for (let i = 0; i < allNodes.length; i++) {
     for (let j = 0; j < list.length; j++) {
       const textMatch = allNodes[i].textContent === list[j] || allNodes[i].innerHTML === (list[j] + ': ');
       const topicMatch = cssClass === CLASS_TOPIC &&
         allNodes[i].firstChild?.innerText?.toLowerCase().includes(list[j].toLowerCase());
-      if ((textMatch && postContent !== previousContent) || topicMatch) {
-        mute(allNodes[i], cssClass, list[j]);
 
-        if (originalNodesLength - allNodes.length > i) {
-          i = -1;
-        } else {
-          i -= originalNodesLength - allNodes.length;
-        }
-
+      if (textMatch || topicMatch) {
+        mute(allNodes[i], cssClass, list[j], i);
         break;
       }
     }
-    previousContent = postContent;
   }
 }
 
