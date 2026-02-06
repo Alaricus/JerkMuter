@@ -197,7 +197,7 @@ function applyStyles(el, styles) {
 function createSvgIcon(pathDValues) {
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(ns, 'svg');
-  applyStyles(svg, { width: '16', height: '16' });
+  applyStyles(svg, { width: '16px', height: '16px' });
   svg.setAttribute('xmlns', ns);
   svg.setAttribute('viewBox', '0 0 24 24');
   svg.setAttribute('fill', 'none');
