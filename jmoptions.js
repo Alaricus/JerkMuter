@@ -55,6 +55,17 @@ async function saveOptions() {
   }
 }
 
+function optionsDisabledToggle() {
+  noteText.disabled = disable.checked;
+  borderColor.disabled = disable.checked;
+  backColor.disabled = disable.checked;
+  textColor.disabled = disable.checked;
+  nameCheckbox.disabled = disable.checked;
+  peek.disabled = disable.checked;
+  example.style.visibility = disable.checked ? 'hidden' : 'visible';
+  quotepeek.disabled = !quotes.checked;
+}
+
 async function restoreOptions() {
   const items = await browserAPI.storage.sync.get(self.JERKMUTER_DEFAULT_OPTIONS);
   quotes.checked = items.st_quotes;
@@ -69,6 +80,7 @@ async function restoreOptions() {
   noteText.value = items.st_noteText;
   peek.checked = items.st_peek;
 
+  optionsDisabledToggle();
   updateExamplePreview();
 
   jerks = items.st_jerks;
@@ -121,8 +133,7 @@ function populateKeywordList() {
 document.addEventListener('DOMContentLoaded', restoreOptions);
 
 quotes.addEventListener('change', async () => {
-  quotepeek.disabled = !quotes.checked;
-
+  optionsDisabledToggle();
   await saveOptions();
 });
 
@@ -130,20 +141,13 @@ quotepeek.addEventListener('change', saveOptions);
 threads.addEventListener('change', saveOptions);
 phrases.addEventListener('change', saveOptions);
 disable.addEventListener('change', async () => {
-  noteText.disabled = disable.checked;
-  borderColor.disabled = disable.checked;
-  backColor.disabled = disable.checked;
-  textColor.disabled = disable.checked;
-  nameCheckbox.disabled = disable.checked;
-  peek.disabled = disable.checked;
-  example.style.visibility = disable.checked ? 'hidden' : 'visible';
-
+  optionsDisabledToggle();
   await saveOptions();
 });
 
 add.addEventListener('click', async () => {
   if (keywordText.value !== '') {
-    keywords.push(keywordText.value.trim());
+    keywords.push(keywordText.value);
     document.querySelector('#showkeywords').style.display = 'block';
     populateKeywordList();
     await saveOptions();
